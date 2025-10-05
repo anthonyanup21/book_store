@@ -33,14 +33,13 @@ if (process.env.ENV === "production") {
   app.use(express.static(frontendPath));
 
   // ⚠️ Use "*" not /.*/ — more reliable for React Router
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(frontendPath, "index.html"));
+  app.get(/.*/, (req, res) => {
+    res.sendFile(path.join(__dirname,"../frontend/dist/index.html"));
   });
 }
 
 connectDB().then(() => {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log(`✅ Server started at port ${PORT}`);
+  app.listen(3000, () => {
+    console.log(`✅ Server started at port 3000`);
   });
 });
