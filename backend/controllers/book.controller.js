@@ -4,7 +4,7 @@ import Review from "../models/review.model.js";
 
 export const getAllBooks = async (req, res) => {
     try {
-        const books = await Book.find()
+        const books = await Book.find().sort({ _id: -1 });
         res.status(200).json({ success: true, books })
 
 
