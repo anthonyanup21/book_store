@@ -23,6 +23,8 @@ app.use(express.json())
 app.use("/api/auth", authRoute)
 app.use("/api/book", bookRoute)
 app.use("/api/review", reviewRoute)
+app.use(express.static(path.join(__dirname,"../frontend/dist")))//dist folder location
+
 
 if(process.env.ENV=="production"){
 app.get(/.*/,(req,res)=>{
