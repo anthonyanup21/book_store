@@ -1,6 +1,6 @@
 ⚙️ Installation & Setup                                         
 1️⃣ Clone Repository                                 
-git clone <your-repo-url>                           
+git clone https://github.com/anthonyanup21/book_store.git                          
 cd interview-assignment-1                                                       
 
 2️⃣ Backend Setup
