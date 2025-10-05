@@ -16,6 +16,8 @@ if(process.env.ENV!="production"){
     app.use(cors({origin:"http://localhost:5173",credentials:true}))
 
 }
+const __dirname=path.resolve()//backend folder location
+
 app.use(cookieParser())
 app.use(express.json())
 app.use("/api/auth", authRoute)
